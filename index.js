@@ -1,10 +1,12 @@
+require('dotenv').config()
+
 const frasi = require("./frasi-plagio");
 const stateMapper = require("./state-interface");
 const emojis = require("./emojis")
 
 let stato = stateMapper.nonInit;
 
-const token = "NzkzMDc0NzMxODM0MTQ2ODQ2.X-m-Zg.JkdBNMKQJ3lcP9Us6DwqzTuDPtk";
+const token = process.env.DISC_TOKEN;
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
